@@ -6,7 +6,10 @@ dist/
 wheels/
 *.egg-info
 game_state.jsonl
+<<<<<<< HEAD
 game_events.jsonl
+=======
+>>>>>>> d1e2c75 (B: Update .gitignore to exclude game_state.jsonl)
 
 
 # Virtual environments
