@@ -1,0 +1,16 @@
+from circleshape import Circleshape
+import pygame
+from constants import PLAYER_RADIUS,LINE_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, PLAYER_TURN_SPEED, PLAYER_SPEED, SHOT_RADIUS
+
+
+
+class Shot (Circleshape):
+
+    def __init__(self, x: float, y: float) -> None:
+        super().__init__(x, y, SHOT_RADIUS)
+    
+    def draw(self, screen: pygame.Surface) -> None:
+        pygame.draw.circle(screen, "white", self.position, self.radius, LINE_WIDTH)
+
+    def update(self, dt: float) -> None:
+       self.position += self.velocity * dt
